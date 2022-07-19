@@ -1,0 +1,11 @@
+class Solution:
+    def reverseString(self, s):
+        """"
+        :type s: str
+        :rtype: str        
+        """
+        if len(s) <= 1:
+            return s
+        elif len(s) >=2:
+            n=len(s)
+            return self.reverseString(s[n//2:])+self.reverseString(s[:n//2])
